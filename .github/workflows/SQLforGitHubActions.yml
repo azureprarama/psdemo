@@ -17,7 +17,7 @@ jobs:
          - uses: azure/sql-action@v2
            with:
             connection-string: ${{ secrets.AZURESQLCONNECTIONSTRING }}
-            path: 'C:\Users\66973\Downloads\DB'
+            path: './syn.dacpac'
             action: 'Publish'
 
             # Azure logout 
