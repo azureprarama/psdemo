@@ -1,0 +1,1 @@
+CREATE SCHEMA synapse_test1
