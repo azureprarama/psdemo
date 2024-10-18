@@ -1,4 +1,4 @@
-name: SQL for GitHub Actions
+name: SQL for GitHub Actionss
 
 on:
     push:
