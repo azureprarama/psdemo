@@ -19,6 +19,8 @@ jobs:
             connection-string: ${{ secrets.AZURESQLCONNECTIONSTRING }}
             path: './schema.sql'
             action: 'Publish'
+            path: './schema2.sql'
+            action: 'Publish'
 
             # Azure logout 
          - name: logout
