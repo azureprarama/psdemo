@@ -2,9 +2,9 @@ name: SQL for GitHub Actions
 
 on:
     push:
-        branches: [ main ]
+        branches: [ tes2 ]
     pull_request:
-        branches: [ main ]
+        branches: [ tes2 ]
 
 jobs:
     Job1:
