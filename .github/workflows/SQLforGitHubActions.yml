@@ -7,7 +7,8 @@ on:
         branches: [ main ]
 
 jobs:
-    build:
+    Job1:
+        name : Job1
         runs-on: windows-latest
         steps:
          - uses: actions/checkout@v1
@@ -18,9 +19,22 @@ jobs:
            with:
             connection-string: ${{ secrets.AZURESQLCONNECTIONSTRING }}
             path: './schema.sql'
-            action: 'Publish'
+            action: 'Publish'           
+    Job2:
+        name : Job2
+        needs: Job1
+        runs-on: windows-latest
+        steps:
+         - uses: actions/checkout@v1
+         - uses: azure/login@v1
+           with:
+            creds: ${{ secrets.AZURE_DED_CREDS }}
+         - uses: azure/sql-action@v2
+           with:
+            connection-string: ${{ secrets.AZURESQLCONNECTIONSTRING }}
             path: './schema2.sql'
             action: 'Publish'
+
 
             # Azure logout 
          - name: logout
