@@ -1,1 +1,10 @@
-CREATE SCHEMA synapse_test1
+ EXECUTE [dbo].[createcustomerschema1]
+	@tenant = 'SynapseTest5'
+
+CREATE TABLE SynapseTest5.Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
