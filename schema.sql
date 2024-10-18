@@ -1,7 +1,7 @@
  EXECUTE [dbo].[createcustomerschema1]
-	@tenant = 'SynapseTest5'
+	@tenant = 'SynapseTest6'
 
-CREATE TABLE SynapseTest5.Persons (
+CREATE TABLE @tenant.Persons (
     PersonID int,
     LastName varchar(255),
     FirstName varchar(255),
