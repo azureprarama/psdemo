@@ -1,0 +1,28 @@
+name: Blob storage website CI
+
+on:
+    push:
+        branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.STORAGE_SECRET }}
+
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+           az storage blob list \
+              account-name <spoolstoragetest> \
+              container-name <spoolfiles> \
+
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
