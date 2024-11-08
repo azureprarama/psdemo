@@ -17,11 +17,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-           az storage blob list \
-              account-name spoolstoragetest \
-              container-name spoolfiles \
-              output table \
-              auth-mode login
+            az storage account list
 
   # Azure logout
     - name: logout
