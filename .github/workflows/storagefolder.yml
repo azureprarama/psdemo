@@ -1,4 +1,4 @@
-name: Blob storage website CI
+name: Read Blob Storage
 
 on:
     push:
@@ -13,13 +13,13 @@ jobs:
       with:
           creds: ${{ secrets.STORAGE_SECRET2 }}
 
-    - name: Upload to blob storage
+    - name: Read blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
            az storage blob list \
-              account-name <spoolstoragetest> \
-              container-name <spoolfiles> \
+              account-name spoolstoragetest \
+              container-name spoolfiles \
 
   # Azure logout
     - name: logout
