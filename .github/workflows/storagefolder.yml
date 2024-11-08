@@ -20,6 +20,8 @@ jobs:
            az storage blob list \
               account-name spoolstoragetest \
               container-name spoolfiles \
+              output table \
+              auth-mode login
 
   # Azure logout
     - name: logout
