@@ -16,7 +16,7 @@ jobs:
     # Create folders
     - name: list blobs
       shell: pwsh 
-      run: ./createFolder.ps1
+      run: ./createFolder.ps1 ./scripts/configFilesPermissions/folderStructure.dev.json
       if: always()
 
   # Azure logout
