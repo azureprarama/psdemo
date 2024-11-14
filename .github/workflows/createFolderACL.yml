@@ -1,0 +1,31 @@
+name: Read Blob Storage
+
+on:
+    push:
+        branches: [ main1 ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.STORAGE_SECRET2 }}
+
+    - name: Read blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+           az storage blob list --account-name spoolstoragetest --container-name spoolfiles --output table --auth-mode login
+
+    # Create folders
+    - name: Create folders
+      run: ./scripts/createFolder.ps1 ./scripts/configFilesPermissions/folderstructure.dev.json
+      if: always()
+
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
