@@ -15,8 +15,9 @@ jobs:
 
     # Create folders
     - name: list blobs
-      shell: pwsh
-      run: ./scripts/listBlob.ps1
+      uses: azure/powershell@v2
+      with: 
+         inlineScript: ./scripts/listBlob.ps1
       if: always()
 
   # Azure logout
