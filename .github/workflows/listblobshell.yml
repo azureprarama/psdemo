@@ -8,21 +8,21 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-     - uses: actions/checkout@v3
-     - uses: azure/login@v1
-       with:
+    - uses: actions/checkout@v3
+    - uses: azure/login@v1
+      with:
           creds: ${{ secrets.STORAGE_SECRET2 }}
 
     # Create folders
-     - name: list blobs
-     - uses: azure/powershell@v2
-       with:
+    - name: list blobs
+    - uses: azure/powershell@v2
+      with:
         azPSVersion: latest
-        run: ./listblob.ps1
-       if: always()
+        run: ./scripts/listblob.ps1
+        if: always()
 
   # Azure logout
-     - name: logout    
-       run: |
+    - name: logout    
+      run: |
             az logout
       if: always()
