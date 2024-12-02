@@ -17,7 +17,7 @@ jobs:
     - name: list blobs
       uses: azure/powershell@v2
       with: 
-         inlineScript: ./scripts/listBlob.ps1
+         run: ./scripts/listBlob.ps1
          azPSVersion: "latest"
       if: always()
 
