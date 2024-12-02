@@ -18,6 +18,7 @@ jobs:
       uses: azure/powershell@v2
       with: 
          inlineScript: ./scripts/listBlob.ps1
+         azPSVersion: "latest"
       if: always()
 
   # Azure logout
