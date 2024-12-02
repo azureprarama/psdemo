@@ -15,7 +15,7 @@ jobs:
 
     # Create folders
     - name: list blobs
-    - uses: azure/powershell@v2
+      uses: azure/powershell@v2
       with:
        azPSVersion: latest
        run: ./scripts/listBlob.ps1
