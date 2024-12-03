@@ -42,7 +42,7 @@ foreach($row in $jsonContent){
     $folder=$row.path
 
     if($row.path -ne "user_area/uma/folder1") 
-    "Different folder"
+    {"Different folder"}
     
 
     }
