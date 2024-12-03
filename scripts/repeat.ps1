@@ -39,6 +39,6 @@ $jsonContent
 
 foreach($row in $jsonContent){
 
-    $row
+    $row.path
 
     }
