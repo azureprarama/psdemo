@@ -41,8 +41,8 @@ foreach($row in $jsonContent){
 
     $folder=$row.path
 
-    if($folder -ne "user_area/uma/folder1") 
-    Write-Output "Different folder"
-    { Break;}
+    if($row.path -ne "user_area/uma/folder1") 
+    "Different folder"
+    
 
     }
