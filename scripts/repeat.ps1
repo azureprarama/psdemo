@@ -46,7 +46,7 @@ foreach($row in $jsonContent){
     $row.path
         
 
-    if($row.containerName.Substring(1,3) -ne "sac") 
+    if($row.containerName.Substring(0,3) -ne "sac") 
     {"Different container"}
     $folder
     $row.path
