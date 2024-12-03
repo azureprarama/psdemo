@@ -36,3 +36,9 @@ Write-Output "The File from path $JSONPath has been processed"
 Write-Output "Handling the following input..."
 $jsonContent = $jsonContent.folders
 $jsonContent
+
+foreach($row in $jsonContent){
+
+    $row
+
+    }
