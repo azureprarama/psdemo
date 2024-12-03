@@ -2,7 +2,7 @@ name: Read Blob Storage
 
 on:
     push:
-        branches: [ main1 ]
+        branches: [ main ]
 
 jobs:
   build:
