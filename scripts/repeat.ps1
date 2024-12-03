@@ -39,7 +39,7 @@ $jsonContent
 
 foreach($row in $jsonContent){
 
-    $folder=$row.path
+    $folder=$row.containerName.Substring(1,3)
 
     if($row.path -ne "user_area/uma/folder1") 
     {"Different folder"}
@@ -48,6 +48,7 @@ foreach($row in $jsonContent){
 
     if($row.containerName.Substring(1,3) -ne "sac") 
     {"Different container"}
+    $folder
     $row.path
      
 
