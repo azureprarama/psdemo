@@ -39,6 +39,10 @@ $jsonContent
 
 foreach($row in $jsonContent){
 
-    $row.path
+    $folder=$row.path
+
+    if($folder -ne "user_area/uma/folder1") 
+    Write-Output "Different folder"
+    { Break;}
 
     }
