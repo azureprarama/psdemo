@@ -43,6 +43,7 @@ foreach($row in $jsonContent){
 
     if($row.path -ne "user_area/uma/folder1") 
     {"Different folder"}
-    
+    $$row.path
+    exit    
 
     }
