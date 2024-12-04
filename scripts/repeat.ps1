@@ -36,9 +36,11 @@ Write-Output "The File from path $JSONPath has been processed"
 Write-Output "Handling the following input..."
 $jsonContent = $jsonContent.folders
 $jsonContent
+$counter=0
 
 foreach($row in $jsonContent){
 
+    $counter++
     $folder=$row.containerName.Substring(0,3)
 
     if($row.path -ne "user_area/uma/folder1") 
@@ -46,11 +48,9 @@ foreach($row in $jsonContent){
     $row.path
         
 
-    if($row.containerName.Substring(0,3) -gt "") 
+    if($row.containerName.Substring(0,3) -le "") 
         {"Different container"}
         $folder
-    else
-        {"Different folder"}
-     
+        
 
     }
