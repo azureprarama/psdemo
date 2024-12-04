@@ -50,7 +50,8 @@ foreach($row in $jsonContent){
         
 
     if($row.containerName.Substring(0,3) -le "") 
-         {"check container for record" return ($counter)}
+         {"check container for record" }
+         return ($counter)
         $folder
         
 
