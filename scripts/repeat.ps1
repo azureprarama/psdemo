@@ -44,10 +44,10 @@ foreach($row in $jsonContent){
     $row.path
     $row.containerName
 
-    if($row.path -gt "") 
+    if($row.path -le "") 
       {Write-Output "The dir could not be found at path " + $counter }    
         
 
-    if($row.containerName -gt "") 
+    if($row.containerName -le "") 
          {Write-Output "The Container could not be found at path " + $counter }         
     }
