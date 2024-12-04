@@ -45,12 +45,9 @@ foreach($row in $jsonContent){
     $row.containerName
 
     if($row.path -gt "") 
-    {"check folder directory for record" }
-    return ($counter)
-    $row.path
+      {Write-Output "The File could not be found at path " + $counter }    
         
 
     if($row.containerName -gt "") 
-         {Write-Output "The File could not be found at path " + $counter }
-         
+         {Write-Output "The File could not be found at path " + $counter }         
     }
