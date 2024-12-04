@@ -47,14 +47,13 @@ foreach($row in $jsonContent){
 
     if($row.path -le "") 
       {Write-Output "The directory parameter is with incorrect value in Config File. Refer row no "$counter     
-       exit }
-
-     if($row.container.substring(0,3) -notin ("sac","mac")) 
-      {Write-Output "The directory parameter is with incorrect value in Config File. Refer row no "$counter     
-       exit }
-        
+       exit }        
 
     if($row.containerName -le "") 
          {Write-Output "The Container parameter is with incorrect value in Config File. Refer row no "$counter 
           exit }
+
+    if($row.containerName.substring(0,3) -notin ("sac","mac")) 
+      {Write-Output "The directory parameter is with incorrect value in Config File. Refer row no "$counter     
+       exit }
     }
