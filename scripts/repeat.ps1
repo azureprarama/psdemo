@@ -47,7 +47,7 @@ foreach($row in $jsonContent){
 
     if($row.path -le "") 
       {Write-Output "The directory parameter is with incorrect value in Config File. Refer row no "$counter     
-      throw 'The specified directory parameter is incorrect'
+      throw 'The directory parameter is with incorrect value in Config File. Refer row no '$counter  
        exit }        
 
     if($row.containerName -le "") 
