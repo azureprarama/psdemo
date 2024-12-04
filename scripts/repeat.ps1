@@ -43,13 +43,13 @@ foreach($row in $jsonContent){
     $counter++
     $folder=$row.containerName.Substring(0,3)
 
-    if($row.path -ne "user_area/uma/folder1") 
-    {"Different folder"}
+    if($row.path -le "") 
+    {"check folder directory for record" $counter}
     $row.path
         
 
     if($row.containerName.Substring(0,3) -le "") 
-        {"Different container"}
+         {"check container for record" $counter}
         $folder
         
 
