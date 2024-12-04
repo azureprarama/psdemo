@@ -51,9 +51,6 @@ foreach($row in $jsonContent){
         
 
     if($row.containerName -le "") 
-         {"check container for record" }
-         return ($counter)
-        $folder
-        
-
+         {Write-Output "The File could not be found at path " + $counter }
+         
     }
