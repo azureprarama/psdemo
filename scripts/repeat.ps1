@@ -44,13 +44,13 @@ foreach($row in $jsonContent){
     $row.path
     $row.containerName
 
-    if($row.path -le "") 
+    if($row.path -gt "") 
     {"check folder directory for record" }
     return ($counter)
     $row.path
         
 
-    if($row.containerName -le "") 
+    if($row.containerName -gt "") 
          {Write-Output "The File could not be found at path " + $counter }
          
     }
