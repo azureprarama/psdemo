@@ -45,9 +45,11 @@ foreach($row in $jsonContent){
     $row.containerName
 
     if($row.path -le "") 
-      {Write-Output "The directory parameter is with incorrect value in Config File row no "$counter }    
+      {Write-Output "The directory parameter is with incorrect value in Config File. Refer row no "$counter     
+       exit }
         
 
     if($row.containerName -le "") 
-         {Write-Output "The Container parameter is with incorrect value in Config File row no "$counter }       
+         {Write-Output "The Container parameter is with incorrect value in Config File. Refer row no "$counter 
+          exit }
     }
