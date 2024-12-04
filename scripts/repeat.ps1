@@ -54,6 +54,6 @@ foreach($row in $jsonContent){
           exit }
 
     if($row.containerName.substring(0,3) -notin ("sac","mac")) 
-      {Write-Output "The directory parameter is with incorrect value in Config File. Refer row no "$counter     
+      {Write-Output "The Container parameter is with incorrect value in Config File. Refer row no "$counter     
        exit }
     }
