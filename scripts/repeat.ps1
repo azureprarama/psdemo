@@ -48,7 +48,7 @@ foreach($row in $jsonContent){
     $row.path
         
 
-    if($row.containerName.Substring(0,3) -le "") 
+    if($row.containerName -le "") 
          {"check container for record" }
          return ($counter)
         $folder
